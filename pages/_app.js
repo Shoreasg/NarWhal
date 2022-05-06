@@ -1,10 +1,12 @@
 import MyHead from '../components/head'
-import SideBar from '../components/sidebar/SideBar'
+import NavBar from '../components/Layout/NavBar'
+import SideBar from '../components/Layout/SideBar'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
-  return(<>
+  return (<>
     <MyHead />
+    <NavBar/>
     <SideBar/>
     <Component {...pageProps} />
   </>
