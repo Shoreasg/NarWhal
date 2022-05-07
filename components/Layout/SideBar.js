@@ -6,16 +6,14 @@ export default function SideBar() {
     const router = useRouter()
 
     return (
-        <div className="flex flex-col bg-[#042235] h-max w-20 fixed">
+        <div className="flex flex-col bg-[#042235] h-max w-20 absolute z-10">
             <div className='h-fit'>
-                <Link href="/">
-                    <button className="h-20 w-20 flex flex-row justify-center items-center">
+                    <div className="h-20 w-20 flex flex-row justify-center items-center">
                         <svg width="38" height="32" viewBox="0 0 38 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M37.9941 16.8349C37.9941 11.1752 33.4062 6.58736 27.7465 6.58736C26.8439 6.58736 25.9454 6.70647 25.074 6.94163C21.319 7.73922 18.3316 10.585 16.0101 13.726C14.5106 15.7549 13.0034 17.6151 10.3857 18.1103C7.96706 18.5681 4.66529 17.1744 4.43731 14.4405C4.35036 13.3957 4.65617 12.1205 5.24374 11.2445C6.19651 9.82315 7.96516 11.1436 9.22234 11.2847C10.1274 11.3859 11.1189 11.4298 11.9972 11.1434C13.7534 10.5712 14.1154 9.16665 13.1141 7.73361C12.1286 6.32286 10.4684 5.48565 8.74732 5.49147C7.7623 5.49491 6.29489 5.86158 5.57367 6.59361C6.14784 5.39589 5.33441 3.79301 4.86787 3.12676C3.9393 1.8003 1.52866 0.647963 0.358923 2.34839C-0.456685 3.5339 0.277229 5.85976 0.979588 6.93826C1.36723 7.53354 1.92478 8.09376 2.08214 8.8086C2.25394 9.58859 1.87359 10.286 1.60369 10.9969C1.32319 11.7356 1.04151 12.4954 0.914864 13.2748C3.05772e-05 18.9023 1.55467 23.672 5.53861 27.1007C6.58583 28.0019 7.78207 28.8047 9.01267 29.4353C10.5137 30.204 12.2384 30.8182 13.891 31.1614C15.5459 31.505 17.3352 31.7475 19.0284 31.7475C26.9007 31.7475 33.6408 27.8263 36.4359 22.265C37.422 20.6903 37.9941 18.8299 37.9941 16.8349Z" fill="white" />
                             <path d="M30.5409 4.38658C28.9342 3.51788 27.1483 3.45113 25.3983 3.86542C23.6382 4.28265 21.7885 5.61072 19.9491 5.46669C18.0768 5.31978 17.8019 3.28486 18.6821 1.97671C20.6126 -0.891351 25.216 -0.251402 27.6181 1.45379C28.2256 1.88508 28.7855 2.37983 29.2882 2.92969C29.673 3.35022 30.0335 4.11239 30.5409 4.38658Z" fill="white" />
                         </svg>
-                    </button>
-                </Link>
+                    </div>
                 <Link href="/campaigns">
                     <a className={`h-20 w-20 flex flex-row justify-center items-center ${router.pathname == "/campaigns" ? "bg-[#2995DA]" : ""} `}>
                         <svg width="30" height="34" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg" className={`fill-slate-600  ${router.pathname == "/campaigns" ? "fill-white" : "opacity-30"} ` }>
@@ -24,8 +22,8 @@ export default function SideBar() {
                     </a>
                 </Link>
                 <Link href="/teams">
-                    <a className={`h-20 w-20 flex flex-row justify-center items-center ${router.pathname == "/teams" ? "bg-[#2995DA]" : ""} `}>
-                        <svg width="30" height="34" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg" className={`fill-slate-600 ${router.pathname == "/teams" ? "fill-white" : ""} ` }>
+                    <a className={`h-20 w-20 flex flex-row justify-center items-center ${router.pathname == "/teams" || router.pathname == "/teams/all" || router.pathname == "/teams/favorites" || router.pathname == "/teams/archived" ? "bg-[#2995DA]" : ""} `}>
+                        <svg width="30" height="34" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg" className={`fill-slate-600 ${router.pathname == "/teams" || router.pathname == "/teams/all" || router.pathname == "/teams/favorites" || router.pathname == "/teams/archived"  ? "fill-white" : ""} ` }>
                             <path id="icon-teams" fillRule="evenodd" clipRule="evenodd" d="M28.6875 17H21.25V8.5C21.25 7.8625 20.825 7.4375 20.1875 7.4375H18.0625V5.3125C18.0625 4.675 17.6375 4.25 17 4.25H15.9375V1.0625C15.9375 0.425 15.5125 0 14.875 0C14.2375 0 13.8125 0.425 13.8125 1.0625V4.25H12.75C12.1125 4.25 11.6875 4.675 11.6875 5.3125V7.4375H9.5625C8.925 7.4375 8.5 7.8625 8.5 8.5V20.1875H1.0625C0.425 20.1875 0 20.6125 0 21.25V32.9375C0 33.575 0.425 34 1.0625 34H9.5625H12.75H17H20.1875H28.6875C29.325 34 29.75 33.575 29.75 32.9375V18.0625C29.75 17.425 29.325 17 28.6875 17ZM6.375 29.75H3.1875V27.625H6.375V29.75ZM6.375 26.5625H3.1875V24.4375H6.375V26.5625ZM10.625 29.75H7.4375V27.625H10.625V29.75ZM10.625 26.5625H7.4375V24.4375H10.625V26.5625ZM15.9375 18.0625V31.875H13.8125V21.25C13.8125 20.6125 13.3875 20.1875 12.75 20.1875H10.625V9.5625H12.75C13.3875 9.5625 13.8125 9.1375 13.8125 8.5V6.375H15.9375V8.5C15.9375 9.1375 16.3625 9.5625 17 9.5625H19.125V17H17C16.3625 17 15.9375 17.425 15.9375 18.0625ZM22.3125 29.75H19.125V27.625H22.3125V29.75ZM22.3125 26.5625H19.125V24.4375H22.3125V26.5625ZM22.3125 23.375H19.125V21.25H22.3125V23.375ZM26.5625 29.75H23.375V27.625H26.5625V29.75ZM26.5625 26.5625H23.375V24.4375H26.5625V26.5625ZM26.5625 23.375H23.375V21.25H26.5625V23.375Z" />
                         </svg>
                     </a>
