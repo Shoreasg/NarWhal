@@ -15,7 +15,7 @@ export default function ShowFavourites({ DummyData }) {
                 {data.is_favorited ? <div className="w-4/5 h-fit border m-10 rounded-md" >
                     <div className="flex flex-row" >
                         <div className="w-fit flex flex-row mt-5 ml-4">
-                            <Image src={data.image} width={"60%"} height={"60%"} />
+                            <img src={data.image} className="w-1/4 h-fit" />
                             <div className="flex flex-col">
                                 <p className="pl-4 text-[#444444] text-[16px] font-proxima-nova font-bold">{data.name}</p>
                                 <p className="pl-4 text-[#565656] font-proxima-nova text-[13px] opacity-50">Created on {data.created_at ? data.created_at : "Missing Date"}</p>
