@@ -12,11 +12,11 @@ export default function ShowFavourites({ DummyData }) {
 
         return (
             <React.Fragment key={data.id}>
-                {data.is_favorited ? <div className="w-4/5 h-fit border m-10 rounded-md" >
+                {data.is_favorited ? <div className="w-full h-fit border m-10 rounded-md" >
                     <div className="flex flex-row" >
                         <div className="w-fit flex flex-row mt-5 ml-4">
                             <img src={data.image} className="w-1/4 h-fit" />
-                            <div className="flex flex-col">
+                            <div className="flex flex-col whitespace-nowrap" >
                                 <p className="pl-4 text-[#444444] text-[16px] font-proxima-nova font-bold">{data.name}</p>
                                 <p className="pl-4 text-[#565656] font-proxima-nova text-[13px] opacity-50">Created on {data.created_at ? data.created_at : "Missing Date"}</p>
                             </div>
@@ -61,7 +61,7 @@ export default function ShowFavourites({ DummyData }) {
                         </div>
                     </div>
                 </div>
-                <div className="grid grid-cols-3 gap-10">
+                <div className="grid grid-cols-3 gap-10 mr-20">
                     {mapDummyData}
                 </div>
             </div>

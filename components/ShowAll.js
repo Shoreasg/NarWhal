@@ -8,13 +8,13 @@ export default function ShowAll({ DummyData }) {
         return (
             <React.Fragment key={data.id}>
                 {data.is_archived ?
-                    <div className="w-4/5 h-fit border m-10 rounded-md bg-[#E4E7EC]" >
+                    <div className="w-full h-fit border m-10 rounded-md bg-[#E4E7EC]" >
                         <div className="flex flex-row" >
                             <div className="w-fit flex flex-row mt-5 ml-4">
                                 <img src={data.image} className="w-1/4 h-fit" />
-                                <div className="flex flex-col" >
+                                <div className="flex flex-col whitespace-nowrap" >
                                     <p className="pl-4 text-[#444444] text-[16px] font-proxima-nova font-bold" >{data.name}</p>
-                                    <p className="pl-4 text-[#565656] font-proxima-nova text-[13px] opacity-50">Archived on {data.created_at ? data.created_at : "Missing Date"}</p>
+                                    <p className="pl-4 text-[#565656] font-proxima-nova text-[13px] opacity-50 ">Archived on {data.created_at ? data.created_at : "Missing Date"}</p>
                                 </div>
                             </div>
                             <div className="w-1/2 flex flex-row justify-end mt-5 mr-4">
@@ -36,11 +36,11 @@ export default function ShowAll({ DummyData }) {
                             <p className="ml-2 mt-5 pb-5 font-proxima-nova text-[15px] opacity-[.45]">{(data.leads_count).toLocaleString("en")} Leads</p>
                         </div>
                     </div> :
-                    <div className="w-4/5 h-fit border m-10 rounded-md" >
+                    <div className="w-full h-fit border m-10 rounded-md" >
                         <div className="flex flex-row" >
                             <div className="w-fit flex flex-row mt-5  ml-4">
                                 <img src={data.image} className="w-1/4 h-fit" />
-                                <div className="flex flex-col">
+                                <div className="flex flex-col whitespace-nowrap" >
                                     <p className="pl-4 text-[#444444] text-[16px] font-proxima-nova font-bold">{data.name}</p>
                                     <p className="pl-4 text-[#565656] font-proxima-nova text-[13px] opacity-50">Created {data.created_at ? data.created_at : "Missing Date"}</p>
                                 </div>
@@ -86,7 +86,7 @@ export default function ShowAll({ DummyData }) {
                         </div>
                     </div>
                 </div>
-                <div className="grid grid-cols-3">
+                <div className="grid grid-cols-3 gap-10 mr-20">
                     {mapDummyData}
                 </div>
             </div>
