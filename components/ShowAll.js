@@ -18,7 +18,7 @@ export default function ShowAll({ DummyData }) {
                         </div>
                     </div>
                     <p className="pl-4 pb-5 pt-5">{data.description}</p>
-                    <div className="border-t flex flex-row mix-blend-multiply">
+                    <div className="border-t flex flex-row ">
                         <div className="ml-4 mt-5 pb-5">
                             <svg width="20" height="24" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg" className="fill-slate-600  opacity-30">
                                 <path id="icon-campaign" fillRule="evenodd" clipRule="evenodd" d="M0.866667 0H21.6667C22.1459 0 22.5333 0.3874 22.5333 0.866667V15.6C22.5333 16.0793 22.1459 16.4667 21.6667 16.4667H12.4592L5.77027 22.3193C5.512 22.5446 5.14627 22.5949 4.84207 22.4553C4.5318 22.3149 4.33333 22.0073 4.33333 21.6667V16.4667H0.866667C0.3874 16.4667 0 16.0793 0 15.6V0.866667C0 0.3874 0.3874 0 0.866667 0ZM24.2667 6.93333H26.8667C27.3451 6.93333 27.7333 7.3216 27.7333 7.8V20.8C27.7333 21.2784 27.3451 21.6667 26.8667 21.6667H24.2667V25.1333C24.2667 25.4583 24.0855 25.7556 23.7969 25.9038C23.5023 26.0537 23.1573 26.0251 22.8965 25.8379L17.056 21.6667H9.14853L13.1109 18.2H22.5333C23.491 18.2 24.2667 17.4243 24.2667 16.4667V6.93333Z" />
@@ -67,8 +67,8 @@ export default function ShowAll({ DummyData }) {
 
     return (
         <>
-            <div className="w-4/6 h-4/6 left-32 top-64 bg-white shadow-lg rounded-sm border border-gray-200 absolute overflow-auto">
-                <div className="flex flex-row h-[10%]">
+            <div className="w-4/6 h-4/6 left-32 top-64 bg-white shadow-lg rounded-sm border border-gray-200 absolute overflow-auto ">
+                <div className="flex flex-row h-[10%] border-b">
                     <div className="flex flex-row justify-start w-1/2">
                         <div className="flex flex-col justify-center ml-8 font-proxima-nova text-[18px] font-semibold">
                             All Teams
@@ -82,7 +82,7 @@ export default function ShowAll({ DummyData }) {
                         </div>
                     </div>
                 </div>
-                <div className="grid grid-cols-3 gap-10">
+                <div className="grid grid-cols-3">
                     {mapDummyData}
                 </div>
             </div>

@@ -43,7 +43,7 @@ export default function ShowArchived({ DummyData }) {
     return (
         <>
             <div className="w-4/6 h-4/6 left-32 top-64 bg-white shadow-lg rounded-sm border border-gray-200 absolute overflow-auto">
-                <div className="flex flex-row h-[10%]">
+                <div className="flex flex-row h-[10%] border-b">
                     <div className="flex flex-row justify-start w-1/2">
                         <div className="flex flex-col justify-center ml-8 font-proxima-nova text-[18px] font-semibold">
                             Favorite Teams
