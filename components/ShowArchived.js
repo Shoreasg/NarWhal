@@ -1,21 +1,21 @@
-export default function ShowFavourites({ DummyData }) {
+export default function ShowArchived({ DummyData }) {
 
-    let favCount = 0
+    let archivedCount = 0
 
 
     const mapDummyData = DummyData.teams.map((data, index) => {
 
-        data.is_favorited ? favCount++ : ""
+        data.is_archived ? archivedCount++ : ""
 
         return (
             <>
-                {data.is_favorited ? <div className="w-4/5 h-fit border m-10 rounded-md" key={index}>
+                {data.is_archived ? <div className="w-4/5 h-fit border m-10 rounded-md" key={index}>
                     <div className="flex flex-row" >
                         <div className="w-fit flex flex-row mt-5 ">
                             <img src={data.image} className="w-1/5 ml-4" />
                             <div className="flex flex-col">
                                 <p className="pl-4 text-[#444444] text-[16px] font-proxima-nova font-bold">{data.name}</p>
-                                <p className="pl-4 text-[#565656] font-proxima-nova text-[13px] opacity-50">Created on {data.created_at ? data.created_at : "Missing Date"}</p>
+                                <p className="pl-4 text-[#565656] font-proxima-nova text-[13px] opacity-50">Archived on {data.created_at ? data.created_at : "Missing Date"}</p>
                             </div>
                         </div>
                         <div className="w-1/2 flex flex-row justify-end mt-5 mr-4">
@@ -52,7 +52,7 @@ export default function ShowFavourites({ DummyData }) {
                     <div className="flex flex-row justify-end w-1/2">
                         <div className="flex flex-col justify-center mr-8 ">
                             <span className="font-proxima-nova text-[14px] text-[#7F7F7F]">
-                                Showing <span className="font-proxima-nova text-[14px] text-[#7F7F7F]">{favCount}</span> to <span className="font-proxima-nova text-[14px] text-[#7F7F7F]">{favCount}</span> of <span className="font-proxima-nova text-[14px] text-[#7F7F7F]">{favCount}</span> Teams
+                                Showing <span className="font-proxima-nova text-[14px] text-[#7F7F7F]">{archivedCount}</span> to <span className="font-proxima-nova text-[14px] text-[#7F7F7F]">{archivedCount}</span> of <span className="font-proxima-nova text-[14px] text-[#7F7F7F]">{archivedCount}</span> Teams
                             </span>
                         </div>
                     </div>
