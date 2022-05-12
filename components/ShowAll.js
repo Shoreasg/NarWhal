@@ -70,25 +70,27 @@ export default function ShowAll({ DummyData }) {
     })
 
     return (
-        <div className="w-4/6 h-4/6 left-32 top-64 bg-white shadow-lg rounded-sm border border-gray-200 absolute overflow-auto ">
-            <div className="flex flex-row h-[10%] border-b">
-                <div className="flex flex-row justify-start w-1/2">
-                    <div className="flex flex-col justify-center ml-8 font-proxima-nova text-[18px] font-semibold">
-                        All Teams
+        <>
+            <div className="w-4/6 h-4/6 left-32 top-64 bg-white shadow-lg rounded-sm border border-gray-200 absolute overflow-auto ">
+                <div className="flex flex-row h-[10%] border-b">
+                    <div className="flex flex-row justify-start w-1/2">
+                        <div className="flex flex-col justify-center ml-8 font-proxima-nova text-[18px] font-semibold">
+                            All Teams
+                        </div>
+                    </div>
+                    <div className="flex flex-row justify-end w-1/2">
+                        <div className="flex flex-col justify-center mr-8 ">
+                            <span className="font-proxima-nova text-[14px] text-[#7F7F7F]">
+                                Showing <span className="font-proxima-nova text-[14px] text-[#7F7F7F]">{DummyData.teams.length}</span> to <span className="font-proxima-nova text-[14px] text-[#7F7F7F]">{DummyData.teams.length}</span> of <span className="font-proxima-nova text-[14px] text-[#7F7F7F]">{DummyData.teams.length}</span> Teams
+                            </span>
+                        </div>
                     </div>
                 </div>
-                <div className="flex flex-row justify-end w-1/2">
-                    <div className="flex flex-col justify-center mr-8 ">
-                        <span className="font-proxima-nova text-[14px] text-[#7F7F7F]">
-                            Showing <span className="font-proxima-nova text-[14px] text-[#7F7F7F]">{DummyData.teams.length}</span> to <span className="font-proxima-nova text-[14px] text-[#7F7F7F]">{DummyData.teams.length}</span> of <span className="font-proxima-nova text-[14px] text-[#7F7F7F]">{DummyData.teams.length}</span> Teams
-                        </span>
-                    </div>
+                <div className="grid grid-cols-3">
+                    {mapDummyData}
                 </div>
             </div>
-            <div className="grid grid-cols-3">
-                {mapDummyData}
-            </div>
-        </div>
+        </>
     )
 }
 

@@ -45,6 +45,7 @@ export default function ShowFavourites({ DummyData }) {
     })
 
     return (
+        <>
             <div className="w-4/6 h-4/6 left-32 top-64 bg-white shadow-lg rounded-sm border border-gray-200 absolute overflow-auto">
                 <div className="flex flex-row h-[10%] border-b">
                     <div className="flex flex-row justify-start w-1/2">
@@ -64,6 +65,7 @@ export default function ShowFavourites({ DummyData }) {
                     {mapDummyData}
                 </div>
             </div>
+        </>
     )
 }
 
