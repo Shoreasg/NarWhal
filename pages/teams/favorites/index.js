@@ -1,6 +1,10 @@
-export default function Favorites ()
+import ShowAll from "../../../components/ShowAll";
+
+export default function Favourites ()
 {
     return(
-        <h1>favorites</h1>
+        <div className="w-screen h-screen bg-[#E5E5E5]">
+            {/* <ShowAll/> */}
+        </div>
     )
 }

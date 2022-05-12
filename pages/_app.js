@@ -13,9 +13,6 @@ function MyApp({ Component, pageProps }) {
     <Header />
     <SideBar />
     <Component {...pageProps} />
-
-
-
   </>
   )
 }

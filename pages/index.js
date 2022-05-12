@@ -1,9 +1,10 @@
+import { useEffect } from "react"
+import { useRouter } from 'next/router'
+
 export default function Home() {
-  return (
-    // <div className="w-full h-full fixed m-[80px]">
-    //   <div className="flex flex-row justify-start w-screen shadow-inner">
-        <h1>home page</h1>
-    //   </div>
-    // </div>
-  )
+  const router = useRouter()
+  useEffect(() => {
+    router.push("/teams/all")
+  }, []);
+
 }

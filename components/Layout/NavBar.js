@@ -6,7 +6,7 @@ export default function NavBar() {
     const router = useRouter()
     const pageName = router.pathname.replace(/[\/-]+/g, '').charAt(0).toUpperCase() + router.pathname.slice(2).split('/')[0]
     return (
-        <div className="flex flex-row justify-start w-full h-[80px] border-b shadow-md z-0 absolute">
+        <div className="flex flex-row justify-start w-full h-[80px] border-b shadow z-0 absolute bg-white">
             <div className="flex flex-col justify-center border-r ml-20">
                 <a className="text-[18px] font-semibold  text-[#1A1919]/50 font-proxima-nova m-12">NARWHAL</a>
             </div>

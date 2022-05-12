@@ -9,9 +9,9 @@ export default function Header() {
     const buttonName = headerName.slice(0, -1)
 
     return (
-        <div className="flex flex-row justify-start w-full h-[146px] mt-20 border-b shadow-md z-0 absolute">
+        <div className="flex flex-row justify-start w-full h-[146px] top-20 shadow z-0 absolute bg-white">
             <div className="flex flex-row justify-start w-full">
-                <div className="flex flex-row justify-start absolute h-full w-1/4 ml-32 space-x-10">
+                <div className="flex flex-row justify-start absolute h-full w-2/12 left-32 space-x-10">
                     <div className={`flex flex-col justify-end justify-items-center w-full text-center font-proxima-nova font-semibold text-[18px] ${router.pathname == "/teams/all" ? "text-[#0083E3] border-b-4 border-[#0083E3]" : ""}`}>
                         <Link href={"/teams/all"}>All</Link>
                     </div>
@@ -49,7 +49,7 @@ export default function Header() {
                         <p className='flex flex-col justify-center h-full font-proxima-nova text-white text-[14px]'>Create New {buttonName}</p>
                     </button>
                 </div>
-                <div className="flex flex-col justify-end absolute mt-28 mr-10 w-max">
+                <div className="flex flex-col justify-end absolute top-28 right-10 w-max">
                     <div className='flex flex-row'>
                         <Icon icon="ei:search" width={30} className="mr-2" />
                         <input type="search" className="p-1" placeholder={`Search ${buttonName} ...`} />
