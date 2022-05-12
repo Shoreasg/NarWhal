@@ -1,11 +1,13 @@
+import Image from 'next/image'
+import React from "react"
 export default function Activity({ DummyData }) {
 
-    const mapDummyData = DummyData.activities.map((data, index) => {
+    const mapDummyData = DummyData.activities.map((data) => {
         return (
-            <>
-                <div className="flex flex-col justify-center ml-8" key={index}>
+            <React.Fragment key={data.id}>
+                <div className="flex flex-col justify-center ml-8" >
                     <div className="flex flex-row">
-                        <img className="object-cover w-[40px] h-[40px] rounded-full" src={data.person.avatar} />
+                        <Image className="object-cover rounded-full" width={"40px"} height={"40px"} src={data.person.avatar} alt="user avatar"/>
                         {data.action === "increased_quota" ?
                             <div className="ml-3">
                                 <span className="text-[#444444] font-proxima-nova font-bold">{data.person.name}</span>
@@ -36,7 +38,7 @@ export default function Activity({ DummyData }) {
                         </div> : ""}
                     </div>
                 </div>
-            </>
+            </React.Fragment>
         )
     })
 
