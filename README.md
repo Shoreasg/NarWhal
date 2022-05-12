@@ -51,7 +51,7 @@ To run this project, install it locally using npm:
 ```
 $ git clone
 $ npm i
-$ npm start
+$ npm run dev
 
 ```
 
