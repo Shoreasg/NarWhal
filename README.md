@@ -35,8 +35,7 @@ This was an assignment by 6Sense. Task was to use their mock API to create [this
 ## FrontEnd
 - [NextJs](https://nextjs.org/)
 - [Tailwind](https://tailwindcss.com/)
-- [BootStrap-CSS](https://getbootstrap.com/)
-
+- [Iconfiy](https://iconify.design/)
 
 
 
